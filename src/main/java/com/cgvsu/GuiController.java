@@ -112,8 +112,8 @@ public class GuiController {
             Model loadedModel = ObjReader.read(fileContent);
 
             models.add(loadedModel);
-            modelSelector.getItems().add(file.getName());
-            modelSelector.getSelectionModel().selectLast();
+            modelSelector.getItems().add(file.getName()); //имя
+            modelSelector.getSelectionModel().selectLast(); //последняя=текущая
             selectedModel = loadedModel;
 
             updateStatusBar();
@@ -129,7 +129,7 @@ public class GuiController {
 
             alert.showAndWait();
         } catch (Exception exception) {
-            // Ошибка парсинга OBJ (ObjReader выбросил исключение)
+            // ObjReader выбросил исключение
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Ошибка формата файла");
             alert.setHeaderText("Файл имеет неверный формат OBJ");
@@ -177,7 +177,6 @@ public class GuiController {
             alert.showAndWait();
 
         }
-
 
     }
 

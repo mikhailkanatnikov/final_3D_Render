@@ -110,8 +110,9 @@ class ObjReaderTest {
             Assertions.assertEquals("Error parsing OBJ file on line: 10. Wrong number of normal.", e.getMessage());
         }
     }
-    //================= some Face tests =================
 
+
+    //================= some Face tests =================
 
     @Test
     public void testParseFace_TriangleBasic() {
@@ -120,7 +121,7 @@ class ObjReaderTest {
         Polygon polygon = ObjReader.parseFace(words, 5);
 
         Assertions.assertEquals(Arrays.asList(0, 1, 2), polygon.getVertexIndices());
-        Assertions.assertNull(polygon.getTextureVertexIndices());
+        Assertions.assertNull(polygon.getTextureVertexIndices()); //должны быть null
         Assertions.assertNull(polygon.getNormalIndices()); //должны быть null
     }
 
