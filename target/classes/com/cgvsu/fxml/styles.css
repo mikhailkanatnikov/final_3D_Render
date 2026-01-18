@@ -1,0 +1,14 @@
+.root {
+    -fx-background-color: #3c3f41;
+}
+
+.menu-bar {
+    -fx-background-color: #bab880;
+}
+
+.button {
+    -fx-background-color: #4c5052;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+}
+
